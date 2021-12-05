@@ -1,0 +1,4 @@
+select name, c.id, (CASE
+                       WHEN c.id<3 THEN 'Fail'
+    ELSE 'Pass'
+    END) from students s join category c on c.max_score> s.score and c.min_score< s.score order by c.id desc;
